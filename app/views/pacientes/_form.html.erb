@@ -31,7 +31,31 @@
     <%= form.text_field :email %>
   </div>
 
+  <%= form.fields_for :endereco do |end_form| %>
+    <div class="field">
+      <%= end_form.label :cep, style: "display: block"%>
+      <%= end_form.text_field :cep %>
+    </div>
+    <div class="field">
+      <%= end_form.label :cidade, style: "display: block" %>
+      <%= end_form.text_field :cidade %>
+    </div>
+    <div class="field">
+      <%= end_form.label :bairro, style: "display: block" %>
+      <%= end_form.text_field :bairro %>
+    </div>
+    <div class="field">
+      <%= end_form.label :logradouro, style: "display: block" %>
+      <%= end_form.text_field :logradouro %>
+    </div>
+    <div class="field">
+      <%= end_form.label :complemento, style: "display: block" %>
+      <%= end_form.text_field :complemento %>
+    </div>
+  <% end %>
+
   <div>
     <%= form.submit %>
   </div>
+
 <% end %>
