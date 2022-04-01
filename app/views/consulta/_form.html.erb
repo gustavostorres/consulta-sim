@@ -18,17 +18,18 @@
 
   <div>
     <%= form.label :horario, style: "display: block" %>
-    <%= form.text_field :horario %>
+    <%= form.select(:horario, %w[00:00 01:00 02:00 03:00 04:00 05:00 06:00 07:00 08:00 09:00 10:00
+    11:00 12:00 13:00 14:00 15:00 16:00 17:00 18:00 19:00 20:00 21:00 22:00 23:00])%>
   </div>
 
   <div>
     <%= form.label :paciente_id, style: "display: block" %>
-    <%= form.text_field :paciente_id %>
+    <%= form.collection_select(:paciente_id, Paciente.all, :id, :nome, prompt:true)%>
   </div>
 
   <div>
     <%= form.label :medico_id, style: "display: block" %>
-    <%= form.text_field :medico_id %>
+    <%= form.collection_select(:medico_id, Medico.all, :id, :nome, prompt:true)%>
   </div>
 
   <div>
