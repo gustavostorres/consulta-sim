@@ -11,7 +11,7 @@ class Paciente < ApplicationRecord
   validates :cpf, uniqueness: true
   validate :cpf_valida
   validates :email, presence: true, uniqueness: true, format:  { with: URI::MailTo::EMAIL_REGEXP }
-  validates :nome, presence: true, length: {in: 3..30}, format: {with: /\A[a-zA-Z]+\z/, message: "Use apenas letras"}
+  validates :nome, presence: true, length: {in: 3..30}, format: {with: /\A[a-zA-Z ]+\z/, message: "Use apenas letras"}
 
 
   def dataNasc_valida
