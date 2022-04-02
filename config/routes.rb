@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/index'
   resources :consulta
   resources :medicos
   resources :pacientes
