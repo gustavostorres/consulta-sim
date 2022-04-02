@@ -6,6 +6,10 @@ class ConsultaController < ApplicationController
     @consulta = Consultum.all
   end
 
+  def ListagemConsultas
+    @consultas = Consultum.where(medico_id: params[:medico_id])
+  end
+
   # GET /consulta/1 or /consulta/1.json
   def show
   end

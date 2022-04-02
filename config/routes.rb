@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   #get 'home/index'
   resources :consulta
-  resources :medicos
+  resources :medicos do
+    resources only: [:ListagemConsultas]
+    get 'listagem' => 'consulta#ListagemConsultas'
+  end
   resources :pacientes
 
   root to: "home#index"

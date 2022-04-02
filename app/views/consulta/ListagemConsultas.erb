@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Consultas Agendadas</h1>
+
+<div id="consulta">
+  <% @consultas.each do |consultum| %>
+    <%= render consultum %>
+    <p>
+      <%= link_to "Show this consultum", consultum %>
+    </p>
+  <% end %>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<%= link_to "Voltar para Home" , root_path%>
+
