@@ -31,6 +31,8 @@ gem 'cpf_cnpj', '~> 0.5.0'
 
 gem 'ffi'
 
+gem 'rspec'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
